@@ -12,9 +12,32 @@ namespace WindowsFormsApp2
 {
     public partial class Form1 : Form
     {
+
+        Guy Tom = new Guy("Tom", 100);
+        /*  {
+              Name = "Tom",
+              Cash = 100
+        }; */
+        Guy Mary = new Guy("Mary", 50);
+        int bank = 100;
         public Form1()
         {
             InitializeComponent();
+            
+        }
+
+
+        public void UpdateForm()
+        {
+            label4.Text = Tom.Name + " has " + Tom.Cash;
+            label5.Text = Mary.Name + " has " +Mary.Cash;
+            label6.Text = $"The bank has $ {bank}";
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
+        
 }
+

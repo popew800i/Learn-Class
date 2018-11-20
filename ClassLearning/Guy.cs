@@ -9,8 +9,13 @@ namespace WindowsFormsApp2
 {
     public class Guy
     {
-        public string Name { get; set; }
-        int Cash;
+        public Guy(string name,int cash)
+        {
+            this.Name = name;
+            this.Cash = cash;
+        }
+        public string Name { get; }
+        public int Cash { get; private set; }
         public int GiveCash(int amount)
         {
 
